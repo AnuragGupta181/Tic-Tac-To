@@ -1,4 +1,18 @@
 
+#win-line {
+    position: absolute;
+    width: 0px;
+    height: 11px;
+    background-color: rgba(0, 0, 0, 0.884);
+    transform-origin: 0 0; /* Ensures proper rotation */
+    transform: scaleX(0);
+    transition: all 1s ease-in-out;
+    z-index: 2; /* Ensures it appears above the board */
+    border-radius: 20px;
+    box-shadow: 0 0 40px 8px rgba(45, 2, 92, 0.993); 
+}
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -19,6 +33,7 @@ h1 {
 }
 
 .board {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
@@ -27,7 +42,7 @@ h1 {
 }
 
 .cell {
-    background-color: #fff;
+    background-color: #da97ee91;
     border: 2px solid #333;
     display: flex;
     align-items: center;
@@ -36,15 +51,16 @@ h1 {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 2.5rem;
 }
 
 .cell:hover {
-    background-color: #e0e0e0;
+    background-color: #d577f1e5;
 }
 
 .cell.taken {
     pointer-events: none;
-    color: #555;
+    color: #ce60f0d5;
 }
 
 .info {
